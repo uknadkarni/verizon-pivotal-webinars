@@ -1,0 +1,7 @@
+---
+applications:
+- name: verizon-pivotal-webinars 
+  memory: 1024M
+  host: verizon-pivotal-webinars 
+  path: target/verizon-pivotal-webinars-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack
