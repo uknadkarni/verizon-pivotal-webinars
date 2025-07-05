@@ -1,7 +1,25 @@
+# Cloud Foundry Deployment Manifest
+#
+# This manifest file configures the deployment of the Verizon Pivotal Webinars
+# application to Cloud Foundry platform. It specifies resource allocation,
+# routing, and buildpack configuration for the Spring Boot application.
+#
+# Usage:
+#   cf push                    # Deploy using this manifest
+#   cf push -f manifest.yml    # Explicitly specify manifest file
+#
+# Prerequisites:
+#   - Application JAR built: ./mvnw clean package
+#   - Cloud Foundry CLI installed and logged in
+#   - Target space selected: cf target -s <space-name>
+#
+# Author: Pivotal
+# Version: 0.0.1-SNAPSHOT
+
 ---
 applications:
-- name: verizon-pivotal-webinars 
-  memory: 1024M
-  host: verizon-pivotal-webinars 
-  path: target/verizon-pivotal-webinars-0.0.1-SNAPSHOT.jar
-  buildpack: https://github.com/cloudfoundry/java-buildpack
+- name: verizon-pivotal-webinars     # Application name in Cloud Foundry
+  memory: 1024M                      # Memory allocation (1GB)
+  host: verizon-pivotal-webinars     # Route hostname (deprecated, use routes)
+  path: target/verizon-pivotal-webinars-0.0.1-SNAPSHOT.jar  # JAR file path
+  buildpack: https://github.com/cloudfoundry/java-buildpack # Java buildpack URL

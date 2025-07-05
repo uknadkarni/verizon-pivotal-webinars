@@ -1,3 +1,37 @@
+/*
+ * Verizon Pivotal Webinars - Main Stylesheet
+ *
+ * This CSS file provides styling for the Verizon Pivotal Webinars application.
+ * It includes styles for the main layout, webinar table, branding elements,
+ * and form components (legacy from previous application version).
+ *
+ * Key Features:
+ * - Responsive table design for webinar catalog
+ * - Verizon brand colors (#01786e for headers)
+ * - Hover effects and alternating row colors
+ * - Legacy form styling (commented sections from previous app)
+ * - Cross-browser compatibility
+ *
+ * Color Scheme:
+ * - Primary: #01786e (Verizon teal)
+ * - Secondary: #617798 (blue-gray)
+ * - Accent: #dd5d20 (orange, commented out)
+ * - Text: #444 (dark gray)
+ * - Background: #fff (white)
+ *
+ * Author: Pivotal
+ * Version: 0.0.1-SNAPSHOT
+ * Last Updated: 2017
+ */
+
+/* =============================================================================
+   BASE STYLES
+   ============================================================================= */
+
+/**
+ * Body element - sets global font family, background, and layout
+ * Uses center alignment for main container positioning
+ */
 body
 {
 	background:#fffff;
@@ -7,6 +41,14 @@ body
 	text-align:center;
 }
 
+/* =============================================================================
+   LAYOUT CONTAINERS
+   ============================================================================= */
+
+/**
+ * Main content container - centers the webinar catalog content
+ * Fixed width design optimized for desktop viewing
+ */
 #form_container
 {
 	background:#fff;
@@ -16,31 +58,48 @@ body
 	width:840px;
 }
 
+/**
+ * Top decorative border element
+ * Provides visual separation between header and content
+ */
 #top
 {
-/*	display:block; */
+/*	display:block; */ /* Commented out - uses default inline display */
 	height:10px;
 	margin:10px auto 0;
 	width:850px;
 }
 
+/**
+ * Footer section styling
+ * Contains deployment information and platform credits
+ * Note: width is specified twice (legacy code)
+ */
 #footer
 {
 	width:840px;
 	clear:both;
 	color:#999999;
 	text-align:center;
-	width:840px;
+	width:840px; /* Duplicate width declaration - could be cleaned up */
 	padding-bottom: 15px;
 	font-size: 85%;
 }
 
+/**
+ * Footer link styling
+ * Subtle dotted underline for platform links
+ */
 #footer a{
 	color:#999999;
 	text-decoration: none;
 	border-bottom: 1px dotted #999999;
 }
 
+/**
+ * Bottom decorative border element
+ * Provides visual closure to the page content
+ */
 #bottom
 {
 	display:block;
@@ -49,15 +108,33 @@ body
 	width:850px;
 }
 
+/* =============================================================================
+   WEBINAR TABLE STYLES
+   ============================================================================= */
+
+/**
+ * Main webinar catalog table
+ * Displays webinar information in a structured, readable format
+ * Uses border-collapse for clean line appearance
+ */
 table {
 	border-collapse: collapse;
 	width: 100%;
 }
 
+/**
+ * Table border styling
+ * Consistent black borders for all table elements
+ */
 table, th, td {
 	border: 1px solid black;
 }
 
+/**
+ * Legacy table cell styling (commented out)
+ * Previous implementation with green borders and full-height links
+ * Kept for reference in case of future modifications
+ */
 /* td {
   width: 200px;
   border: solid 1px green;
@@ -69,22 +146,41 @@ td a {
   width:100%;
 } */
 
+/**
+ * Row hover effect
+ * Provides visual feedback when users hover over webinar entries
+ * Uses light gray background for subtle highlighting
+ */
 tr:hover {
-	background-color: #cacacaff /* #f5f5f5 */
+	background-color: #cacacaff /* Alternative: #f5f5f5 */
 }
 
+/**
+ * Cell content alignment and spacing
+ * Centers content and provides adequate padding for readability
+ */
 th, td {
 	text-align: center;
 	padding: 8px;
 }
 
+/**
+ * Alternating row colors (zebra striping)
+ * Improves readability by distinguishing between rows
+ * Applies to even-numbered rows (2nd, 4th, 6th, etc.)
+ */
 tr:nth-child(even) {
 	background-color: #f2f2f2
 }
 
+/**
+ * Table header styling
+ * Uses Verizon brand color (#01786e) for professional appearance
+ * Alternative orange color (#dd5d20) commented out
+ */
 th {
-	background-color: #01786e;
-	/*	background-color: #dd5d20; */
+	background-color: #01786e; /* Verizon teal brand color */
+	/*	background-color: #dd5d20; */ /* Alternative orange color */
 	color: white;
 }
 
